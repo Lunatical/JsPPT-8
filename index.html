@@ -191,9 +191,12 @@
                         <img src="image/jquery_find_1.png">
                         <p>
                             <small>
-                                [3~4] 두번째 인자인 context가 undefined 이기때문에 패스<br>
-                                [7] context 인자의 기본값을 설정함. 조건 두개를 먹어버리기에 document 로 설정된다.<br>
-                                [9] 첫번째 
+                                [3~4] 두번째 인자인 context가 undefined 이기때문에 패스<br><br>
+                                [7] context 인자의 기본값을 설정함. 조건 두개를 먹어버리기에 document 로 설정된다.<br><br>
+                                [9] t는 문자열 #myDiv이므로 String 이다.<br><br>
+                                [11~] t 는 '/', '//' 을 포함하지 않은문자열이기 때문에 결과로 -1 이 나오므로 true 로 취급되나 <br>
+                                부정 연산자가 붙어 false<br>
+                                참고로 결과로 true 가 되는경우는 문자열의 시작이 / 나 // 가 되어 0이 나왔을경우.
                             </small>
                         </p>
                     </section>
@@ -201,18 +204,127 @@
                         <img src="image/jquery_find_2.png">
                         <p>
                             <small>
+                                [5] jQuery.trim(t) 호출로 양 끝 공백문자 제거 후<br>
+                                replace()메서드 호출. 문자열 //로 시작되는 문자열에서 //를 제거한 문자열을 생성<br><br>
+
+                                [9] jQuery.token 에 있는 정규식을 정규표현식 객체 생성자인 RegExp를 이용해서 생성.
+
+                                [10] t 가 해당 정규식에 포함되었는지를 확인. 해당안되기에 false
+
+                                [12~] m 이 false 이기때문에 생략
+                            </small>
+                        </p>
+                    </section>
+                    <section>
+                        <img src="image/jquery_token.png">
+                        <p>
+                            <small>
+                                정규식만 빠르게 확인하고 넘어갑니다.<br>
+                                ^(\\.\\.|/\\.\\.) : .. 또는 /.. 로 시작되는 문자열<br><br>
+                                ^(>|/) : >나 / 로 시작되는 문자열<br><br>
+                                ^(\\+) : +로 ㅅ시작되는 문자열<br><br>
+                                ^(~) : ~로 시작되는 문자열
+
 
                             </small>
                         </p>
                     </section>
                     <section>
                         <img src="image/jquery_find_3.png">
+                        <p>
+                            <small>
+                                [2] t 가 , 이나 | 로 시작되는경우 true 가 되겠지만 t 는 #myDiv이므로 지나친다.<br><br>
+                                [8-9] re2 에 정규표현식 리터럴으로 객체를생성하고 다음과같은 문자열패턴매칭을 수행한다.<br>
+                                m[0] : #myDiv / m[1] : # / m[2] : myDiv<br><br>
+                                [11] m[1]이 # 이므로 if문 이하 실행 <br>
+                                [13] old = document.getElementById('myDiv');<br>
+                                [14] old 를 배열형태로 저장하여 old, ret, r 에 넣는다.<br>
+                                [15] re2에 매칭되는부분들을 제거한 문자열을 생성해서 저장하라<br>
+                                t 는 re2 정규식에 매칭되므로 매칭된부분을 지우면 t는 빈 문자열이된다.
+                            </small>
+                        </p>
+                    </section>
+                    <section>
+                        <p>
+                            /^([#.]?)([a-z0-9\\*_-]*)/i<br>
+                            <small>
+                                ^ : 문자열시작 <br>
+                                ([#.]?) : 문자클래스 []뒤에붙은 ? 는 없거나 한번반복되는 수량자를 의미한다. 그러므로 # | . 로 시작될경우 캡쳐<br>
+                                ([a-z0-9\\*_-]*) : 빈 문자열이나 문자클래스에 해당하는 문자들로 구성된 문자열<br>
+                                i : 정규표현식이 끝나고 나온 i 는 정규표현식 플래그. 대소문자를 구분하지않게된다.<br>
+                            </small>
+                        </p>
                     </section>
                     <section>
                         <img src="image/jquery_find_4.png">
+                        <p>
+                            <small>
+                                [1] : t 는 빈 문자열이 되었기 때문에 실행되지않음<br><br>
+                                [8] : ret[0] 은 전에 id가 myDiv인 DOM객체를 넣었고 context는 document객체를 저장하였기 때문에 불일치.<br><br>
+                                [9] : jQuery.merge는 두 배열을 합치는 jQuery의 유틸메서드이다.<br><br>
+                                done은 ret 을 그대로 받음. ret 즉 myDiv DOM을 가르키는 변수를 결과값으로 리턴.
+                            </small>
+                        </p>
                     </section>
                 </section>
-                <!-- Example of nested vertical slides -->
+                <section>
+                    <section>
+                        <h2 class="fragment grow">this.get</h2>
+                        <p>
+                            <small>
+                                jQuery.find 메서드의 호출 결과가 this.get 메서드 호출의 인자로 사용된다.
+                            </small>
+                        </p>
+                    </section>
+                    <section>
+                        <img src="image/jquery_get.png">
+                        <p>
+                            <small>
+                                [3] num은 DOM객체를 가진 배열 이므로 true가 된다. (find 에서 return 된 done)<br><br>
+                                [7] this는 jQuery생성자로 만들어지는 객체. this를 유사배열객체로 만들기 위함.<br><br>
+                                [8] 인자로 받은 num을 this에 넘긴다.
+                            </small>
+                        </p>
+                        <p class="fragment">그럼 이제 다시 jQuery함수코드로 돌아가서</p>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <pre><code>
+function jQUery(a, c) {
+    ......
+    var fn = arguments[ arguments.length - 1 ];
+
+    if ( fn && fn.constructor == Function )
+        this.each(fn);
+}
+                        </code></pre>
+                        <p>
+                            <small>
+                                [3] arguments[arguments.length -1 ]; 는 함수를 호출했을때 넘어온인자의 마지막인자.<br><br>
+                                [5] c는 undefined, fn 은 c를 참조하므로 실행되지않는다.<br><br>
+                                jQuery가 생성자로 호출되었기 때문에 id가 myDiv인 DOM객체를 포함한 jQuery 객체가 지금까지 살펴본<br>
+                                $(#myDiv)함수 호출의 최종결과가 된다.
+                            </small>
+                        </p>
+                        이제 $("#myDiv").text() 를 살펴보자.
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>$("#myDiv").text()</h2>
+                    </section>
+                    <section>
+                        <img src="image/text().png">
+                        <p>
+                            <small>
+                                [2] 지금 호출은 $("#myDiv").text()로 호출했기때문에 this 는 jQuery객체가된다.<br>
+                                [4] e가 jQuery객체를 가르키기때문에 length가 1로 변경되어 실행된다.<br>
+                                [5] e[0] 은 DOM 객체 myDiv 객체를 가르킨다. .childNodes e[0]의 자식 노드들을 담음.
+                            </small>
+                        </p>
+                    </section>
+                </section>
 
                 <section>
                     <h2>Slides</h2>
