@@ -19,29 +19,39 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="jquery.js" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/js/jquery.js">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="0.41028333" vertical-offset="3641" max-vertical-offset="32778">
+                    <caret line="224" column="45" selection-start-line="224" selection-start-column="45" selection-end-line="224" selection-end-column="45" />
+                    <folding>
+                      <element signature="n#!!doc" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="js-8" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="jquery.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/jquery.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1949" max-vertical-offset="32778">
-              <caret line="125" column="32" selection-start-line="125" selection-start-column="32" selection-end-line="125" selection-end-column="32" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.56626505" vertical-offset="5279" max-vertical-offset="11610">
-              <caret line="322" column="95" selection-start-line="322" selection-start-column="95" selection-end-line="322" selection-end-column="95" />
+            <state vertical-scroll-proportion="0.42825848" vertical-offset="7583" max-vertical-offset="8910">
+              <caret line="443" column="30" selection-start-line="443" selection-start-column="30" selection-end-line="443" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -454,18 +464,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1949" max-vertical-offset="32778">
-          <caret line="125" column="32" selection-start-line="125" selection-start-column="32" selection-end-line="125" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.41028333" vertical-offset="3641" max-vertical-offset="32778">
+          <caret line="224" column="45" selection-start-line="224" selection-start-column="45" selection-end-line="224" selection-end-column="45" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/FireFoxDownload/jquery-ui-1.11.2.custom/jquery-ui.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.747114" vertical-offset="10854" max-vertical-offset="300204">
+          <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
+          <folding>
+            <marker date="1421072500000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421072500000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421072500000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421072500000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56626505" vertical-offset="5279" max-vertical-offset="11610">
-          <caret line="322" column="95" selection-start-line="322" selection-start-column="95" selection-end-line="322" selection-end-column="95" />
+        <state vertical-scroll-proportion="0.42825848" vertical-offset="7583" max-vertical-offset="8910">
+          <caret line="443" column="30" selection-start-line="443" selection-start-column="30" selection-end-line="443" selection-end-column="30" />
           <folding />
         </state>
       </provider>
